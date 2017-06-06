@@ -70,7 +70,7 @@ const AndroidMenu = new Lang.Class({
 
         //start adb daemon if not running
         AdbHelper.startDaemon();
-        
+
     },
 
     _findDevices: function() {
@@ -96,7 +96,7 @@ const AndroidMenu = new Lang.Class({
 
         AdbHelper.takeScreenshot(device.deviceId);
         Main.notify("Screenshot saved in Desktop")
-        
+
     },
 
     _recordScreen: function(device) {
@@ -204,10 +204,10 @@ const AndroidMenu = new Lang.Class({
 
                 }
 
-                
+
             }
 
-            
+
         },
 
         _addErrorItem: function(error) {
@@ -240,7 +240,7 @@ let _indicator;
 
 function enable() {
     _indicator = new AndroidMenu;
-    
+
     Main.panel.addToStatusArea('android-menu', _indicator);
 
 }
